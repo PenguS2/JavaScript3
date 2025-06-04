@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        .checked {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+    <ul id="shopping-list">
+        <li>
+            <input type="checkbox" class="item-checkbox"> Maçãs
+        </li>
+        <li>
+            <input type="checkbox" class="item-checkbox"> Pães
+        </li>
+        <li>
+            <input type="checkbox" class="item-checkbox"> Leite
+        </li>
+        <li>
+            <input type="checkbox" class="item-checkbox"> Ovos
+        </li>
+    </ul>
+
+    <script>
+        document.querySelectorAll('.item-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const listItem = this.parentElement;
+                if (this.checked) {
+                    listItem.classList.add('checked');
+                } else {
+                    listItem.classList.remove('checked');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

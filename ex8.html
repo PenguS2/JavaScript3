@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preenchimento Automático</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        p {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preenchimento Automático</h1>
+    <label for="name">Digite seu nome:</label>
+    <input type="text" id="name" placeholder="Seu nome">
+
+    <label for="color">Selecione uma cor:</label>
+    <select id="color">
+        <option value="">Escolha uma cor</option>
+        <option value="Vermelho">Vermelho</option>
+        <option value="Azul">Azul</option>
+        <option value="Verde">Verde</option>
+        <option value="Amarelo">Amarelo</option>
+    </select>
+
+    <p id="output"></p>
+
+    <script>
+        const nameInput = document.getElementById('name');
+        const colorSelect = document.getElementById('color');
+        const outputParagraph = document.getElementById('output');
+
+        function updateOutput() {
+            const name = nameInput.value.trim();
+            const color = colorSelect.value;
+            if (name && color) {
+                outputParagraph.textContent = `O nome digitado foi: ${name} e a cor selecionada foi: ${color}`;
+            } else {
+                outputParagraph.textContent = '';
+            }
+        }
+
+        nameInput.addEventListener('input', updateOutput);
+        colorSelect.addEventListener('change', updateOutput);
+    </script>
+</body>
+</html>

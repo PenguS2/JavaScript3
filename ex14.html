@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que dia e que horas?</title>
+    <script>
+        function showDateTime() {
+            const currentDate = new Date();
+            document.getElementById('dateTimeDisplay').innerText = currentDate;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="dateTimeDisplay">Clique no botão para ver a data e hora atual</h1>
+    <button onclick="showDateTime()">Mostrar Data e Hora</button>
+</body>
+</html>

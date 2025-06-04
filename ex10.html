@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem Favorito</title>
+    <style>
+        #character-image {
+            display: none;
+            margin-top: 20px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="show-button">Clique aqui</button>
+    <img id="character-image" src="https://animenew.com.br/wp-content/uploads/2023/02/Conheca-as-Novas-Figures-encantadoras-de-Ram-e-Rem-de-Re-Zero-jpg.webp" alt="Personagem Favorito">
+
+    <script>
+        const button = document.getElementById('show-button');
+        const image = document.getElementById('character-image');
+
+        button.addEventListener('click', () => {
+            if (image.style.display == 'block') {
+              image.style.display = 'none';
+            }   
+            else {
+              image.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

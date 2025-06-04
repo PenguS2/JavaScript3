@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de cor de botão</title>
+</head>
+<body>
+    <div>
+        <button id="show-button">Clique aqui</button>
+    </div>
+    
+
+    <script>
+        const button = document.getElementById('show-button');
+
+        button.addEventListener('click', () => {
+            button.style.backgroundColor = 'red';
+            button.style.color = 'white';
+            button.textContent = 'Clicado!';
+        });
+    </script>
+</body>
+</html>

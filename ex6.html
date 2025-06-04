@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumenta o Emoji</title>
+    <style>
+        .emoji {
+            font-size: 50px;
+            transition: font-size 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <p class="emoji" onmouseover="aumentarEmoji(this)" onmouseout="reduzirEmoji(this)">😊</p>
+
+    <script>
+        function aumentarEmoji(element) {
+            element.style.fontSize = "100px";
+        }
+
+        function reduzirEmoji(element) {
+            element.style.fontSize = "50px";
+        }
+    </script>
+</body>
+</html>
